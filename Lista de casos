@@ -1,0 +1,152 @@
+1)
+public class Main {
+    public static void main(String[] args) {
+        // Declarar las variables enteras x e y y asignarles los valores
+        int x = 144;
+        int y = 999;
+
+        // Mostrar por pantalla el valor de cada variable
+        System.out.println("El valor de x es: " + x);
+        System.out.println("El valor de y es: " + y);
+
+        // Realizar las operaciones aritméticas y mostrar los resultados
+        int suma = x + y;
+        int resta = x - y;
+        int division = x / y;
+        int multiplicacion = x * y;
+
+        System.out.println("La suma de x e y es: " + suma);
+        System.out.println("La resta de x e y es: " + resta);
+        System.out.println("La división de x entre y es: " + division);
+        System.out.println("La multiplicación de x e y es: " + multiplicacion);
+    }
+}
+
+2)
+public class Main {
+    public static void main(String[] args) {
+        // Declarar las variables nombre, dirección y teléfono y asignarles valores
+        String nombre = "Aldair Galarza";
+        String direccion = "Grumete Medina, 234";
+        String telefono = "998-123-4567";
+
+        // Mostrar los valores de las variables por pantalla
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Dirección: " + direccion);
+        System.out.println("Teléfono: " + telefono);
+    }
+}
+
+3)
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Definir la tasa de conversión de euros a pesetas
+        double tasaDeConversion = 166.386; // 1 euro = 166.386 pesetas
+
+        // Crear un objeto Scanner para la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar al usuario que ingrese la cantidad de euros
+        System.out.print("Ingresa la cantidad de euros que deseas convertir: ");
+        double cantidadEuros = scanner.nextDouble();
+
+        // Cerrar el objeto Scanner
+        scanner.close();
+
+        // Realizar la conversión a pesetas
+        double cantidadPesetas = cantidadEuros * tasaDeConversion;
+
+        // Mostrar el resultado por pantalla
+        System.out.println(cantidadEuros + " euros equivalen a " + cantidadPesetas + " pesetas.");
+    }
+}
+
+
+4) 
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Definir la tasa de conversión de soles a euros
+        double tasaDeConversion = 0.113; // 1 sol peruano = 0.113 euros
+
+        // Crear un objeto Scanner para la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar al usuario que ingrese la cantidad de soles peruanos
+        System.out.print("Ingresa la cantidad de soles peruanos que deseas convertir: ");
+        double cantidadSoles = scanner.nextDouble();
+
+        // Cerrar el objeto Scanner
+        scanner.close();
+
+        // Realizar la conversión a euros
+        double cantidadEuros = cantidadSoles * tasaDeConversion;
+
+        // Mostrar el resultado por pantalla
+        System.out.println(cantidadSoles + " soles peruanos equivalen a " + cantidadEuros + " euros.");
+    }
+}
+
+5)
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Tasa de pago por hora
+        double tasaHora = 12.0;
+
+        // Crear un objeto Scanner para la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar al usuario que ingrese las horas trabajadas
+        System.out.print("Ingresa las horas trabajadas en la semana: ");
+        double horasTrabajadas = scanner.nextDouble();
+
+        // Cerrar el objeto Scanner
+        scanner.close();
+
+        // Calcular el salario semanal
+        double salarioSemanal = horasTrabajadas * tasaHora;
+
+        // Mostrar el salario por pantalla
+        System.out.println("El salario semanal del empleado es: " + salarioSemanal + " euros.");
+    }
+}
+
+6)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Factor de conversión de Mb a Kb
+        int factorConversion = 1024; // 1 Mb = 1024 Kb
+
+        // Crear un objeto Scanner para la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar al usuario que ingrese la cantidad en megabytes (Mb)
+        System.out.print("Ingresa la cantidad en megabytes (Mb) que deseas convertir a kilobytes (Kb): ");
+        double megabytes = scanner.nextDouble();
+
+        // Cerrar el objeto Scanner
+        scanner.close();
+
+        // Realizar la conversión a kilobytes (Kb)
+        double kilobytes = megabytes * factorConversion;
+
+        // Mostrar el resultado por pantalla
+        System.out.println(megabytes + " Megabytes (Mb) equivalen a " + kilobytes + " Kilobytes (Kb).");
+    }
+}
+
+7)
+
+
+
+
