@@ -146,6 +146,389 @@ public class Main {
 }
 
 7)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Crear un objeto Scanner para la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar al usuario que ingrese la nota del primer examen
+        System.out.print("Introduce la nota del primer examen: ");
+        double notaPrimerExamen = scanner.nextDouble();
+
+        // Solicitar al usuario que ingrese la nota deseada en el trimestre
+        System.out.print("¿Qué nota quieres sacar en el trimestre?: ");
+        double notaDeseada = scanner.nextDouble();
+
+        // Calcular la nota necesaria en el segundo examen
+        double notaSegundoExamen = (notaDeseada - (0.4 * notaPrimerExamen)) / 0.6;
+
+        // Mostrar el resultado por pantalla
+        System.out.println("Para tener un " + notaDeseada + " en el trimestre necesitas sacar un " + notaSegundoExamen + " en el segundo examen.");
+
+        // Cerrar el objeto Scanner
+        scanner.close();
+    }
+}
+
+8)
+import java.util.Scanner;
+
+public class SaludoSegunHora {
+    public static void main(String[] args) {
+        // Crear un objeto Scanner para la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar al usuario que ingrese la hora
+        System.out.print("Por favor, ingresa una hora (en formato de 24 horas, sin minutos): ");
+        int hora = scanner.nextInt();
+
+        // Cerrar el objeto Scanner
+        scanner.close();
+
+        // Determinar el saludo según la hora
+        String saludo;
+        if (hora >= 6 && hora <= 12) {
+            saludo = "Buenos días";
+        } else if (hora >= 13 && hora <= 20) {
+            saludo = "Buenas tardes";
+        } else {
+            saludo = "Buenas noches";
+        }
+
+        // Mostrar el saludo por pantalla
+        System.out.println(saludo);
+    }
+}
+
+9)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Tasa de pago por hora ordinaria
+        double tasaHoraOrdinaria = 12.0;
+        
+        // Tasa de pago por hora extra
+        double tasaHoraExtra = 16.0;
+
+        // Número máximo de horas ordinarias
+        int horasOrdinariasMaximas = 40;
+
+        // Crear un objeto Scanner para la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar al usuario que ingrese las horas trabajadas
+        System.out.print("Ingresa las horas trabajadas en la semana: ");
+        double horasTrabajadas = scanner.nextDouble();
+
+        // Cerrar el objeto Scanner
+        scanner.close();
+
+        // Calcular el salario semanal
+        double salarioSemanal = 0.0;
+
+        if (horasTrabajadas <= horasOrdinariasMaximas) {
+            // Si las horas trabajadas son menores o iguales a 40, todas son horas ordinarias
+            salarioSemanal = horasTrabajadas * tasaHoraOrdinaria;
+        } else {
+            // Si hay horas extras
+            double horasOrdinarias = horasOrdinariasMaximas;
+            double horasExtras = horasTrabajadas - horasOrdinariasMaximas;
+            salarioSemanal = (horasOrdinarias * tasaHoraOrdinaria) + (horasExtras * tasaHoraExtra);
+        }
+
+        // Mostrar el salario por pantalla
+        System.out.println("El salario semanal del trabajador es: " + salarioSemanal + " soles.");
+    }
+}
+
+10)
+
+import java.util.Scanner;
+import java.lang.Math;
+
+public class Main {
+    public static void main(String[] args) {
+        // Gravedad en m/s^2
+        double g = 9.81;
+
+        // Crear un objeto Scanner para la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar al usuario que ingrese la altura desde la que cae el objeto
+        System.out.print("Ingresa la altura desde la que cae el objeto (en metros): ");
+        double altura = scanner.nextDouble();
+
+        // Cerrar el objeto Scanner
+        scanner.close();
+
+        // Calcular el tiempo de caída
+        double tiempo = Math.sqrt((2 * altura) / g);
+
+        // Mostrar el resultado por pantalla
+        System.out.println("El objeto tardará " + tiempo + " segundos en caer desde una altura de " + altura + " metros.");
+    }
+}
+
+11)
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Crear un objeto Scanner para la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar al usuario que ingrese la hora y los minutos
+        System.out.print("Ingresa la hora (0-23): ");
+        int horas = scanner.nextInt();
+
+        System.out.print("Ingresa los minutos (0-59): ");
+        int minutos = scanner.nextInt();
+
+        // Cerrar el objeto Scanner
+        scanner.close();
+
+        // Calcular los segundos hasta la medianoche
+        int segundosHastaMedianoche = ((23 - horas) * 3600) + ((59 - minutos) * 60);
+
+        // Mostrar el resultado por pantalla
+        System.out.println("Faltan " + segundosHastaMedianoche + " segundos para llegar a la medianoche.");
+    }
+}
+
+12)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Crear un objeto Scanner para la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar al usuario que ingrese un número
+        System.out.print("Ingresa un número entero: ");
+        int numero = scanner.nextInt();
+
+        // Cerrar el objeto Scanner
+        scanner.close();
+
+        // Verificar si el número es par y/o divisible por 5
+        boolean esPar = (numero % 2 == 0);
+        boolean esDivisiblePor5 = (numero % 5 == 0);
+
+        // Mostrar los resultados
+        if (esPar && esDivisiblePor5) {
+            System.out.println(numero + " es par y divisible por 5.");
+        } else if (esPar) {
+            System.out.println(numero + " es par pero no es divisible por 5.");
+        } else if (esDivisiblePor5) {
+            System.out.println(numero + " no es par pero es divisible por 5.");
+        } else {
+            System.out.println(numero + " no es par ni divisible por 5.");
+        }
+    }
+}
+
+13)
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Crear un objeto Scanner para la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar al usuario que ingrese un número entero
+        System.out.print("Ingresa un número entero (positivo o negativo, hasta 5 dígitos): ");
+        int numero = scanner.nextInt();
+
+        // Cerrar el objeto Scanner
+        scanner.close();
+
+        // Convertir el número a positivo si es negativo
+        int numeroAbsoluto = Math.abs(numero);
+
+        // Contar los dígitos del número
+        int cantidadDigitos = Integer.toString(numeroAbsoluto).length();
+
+        // Mostrar la cantidad de dígitos
+        System.out.println("El número " + numero + " tiene " + cantidadDigitos + " dígitos.");
+    }
+}
+
+14)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingresa un día de la semana (lunes a viernes): ");
+        String diaSemana = scanner.nextLine();
+
+        System.out.print("Ingresa la hora (horas y minutos, en formato HH:mm): ");
+        String horaStr = scanner.nextLine();
+
+        scanner.close();
+
+        int minutosFinDeSemana = 4 * 24 * 60 + 15 * 60;
+
+        switch (diaSemana.toLowerCase()) {
+            case "lunes": minutosFinDeSemana -= 24 * 60; break;
+            case "martes": minutosFinDeSemana -= 2 * 24 * 60; break;
+            case "miércoles": minutosFinDeSemana -= 3 * 24 * 60; break;
+            case "jueves": minutosFinDeSemana -= 4 * 24 * 60; break;
+            case "viernes": minutosFinDeSemana -= 15 * 60; break;
+            default:
+                System.out.println("Día de la semana no válido.");
+                return;
+        }
+
+        String[] partesHora = horaStr.split(":");
+        int minutosDesdeInicio = Integer.parseInt(partesHora[0]) * 60 + Integer.parseInt(partesHora[1]);
+        int minutosRestantes = minutosFinDeSemana - minutosDesdeInicio;
+
+        if (minutosRestantes < 0) {
+            System.out.println("Ya es fin de semana.");
+        } else {
+            System.out.println("Minutos restantes hasta el fin de semana: " + minutosRestantes + " minutos.");
+        }
+    }
+}
+
+15)
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Combinación de la caja fuerte (número de 4 cifras)
+        int combinacion = 1234;
+        
+        // Número de intentos permitidos
+        int intentosMaximos = 4;
+        
+        // Crear un objeto Scanner para leer la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Bienvenido a la caja fuerte.");
+        
+        // Bucle para gestionar los intentos
+        for (int intentos = 1; intentos <= intentosMaximos; intentos++) {
+            System.out.print("Introduce la combinación de 4 cifras: ");
+            int intento = scanner.nextInt();
+            
+            if (intento == combinacion) {
+                System.out.println("La caja fuerte se ha abierto satisfactoriamente.");
+                break; // Sale del bucle si la combinación es correcta
+            } else {
+                System.out.println("Lo siento, esa no es la combinación.");
+                
+                if (intentos < intentosMaximos) {
+                    int intentosRestantes = intentosMaximos - intentos;
+                    System.out.println("Te quedan " + intentosRestantes + " intentos.");
+                } else {
+                    System.out.println("Has agotado tus intentos. La caja fuerte permanece cerrada.");
+                }
+            }
+        }
+        
+        // Cerrar el scanner
+        scanner.close();
+    }
+}
+
+16)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Crear un objeto Scanner para leer la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        // Declarar variables para contar los números positivos y negativos
+        int positivos = 0;
+        int negativos = 0;
+
+        System.out.println("Ingrese diez números:");
+
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Número " + (i + 1) + ": ");
+            int numero = scanner.nextInt();
+
+            if (numero > 0) {
+                positivos++;
+            } else if (numero < 0) {
+                negativos++;
+            }
+        }
+
+        // Cerrar el scanner
+        scanner.close();
+
+        // Mostrar el resultado
+        System.out.println("Números positivos: " + positivos);
+        System.out.println("Números negativos: " + negativos);
+    }
+}
+
+17)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Crear un objeto Scanner para leer la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        int contadorNumeros = 0;
+        int sumaImpares = 0;
+        int mayorPar = Integer.MIN_VALUE;
+
+        System.out.println("Introduce números (introduce un número negativo para finalizar):");
+
+        while (true) {
+            System.out.print("Número " + (contadorNumeros + 1) + ": ");
+            int numero = scanner.nextInt();
+
+            if (numero < 0) {
+                break; // Salir del bucle si se ingresa un número negativo
+            }
+
+            contadorNumeros++;
+
+            if (numero % 2 != 0) {
+                // Es impar, agregarlo a la suma de impares
+                sumaImpares += numero;
+            } else {
+                // Es par, verificar si es mayor que el mayor número par actual
+                if (numero > mayorPar) {
+                    mayorPar = numero;
+                }
+            }
+        }
+
+        // Calcular la media de los impares
+        double mediaImpares = (contadorNumeros > 0) ? (double) sumaImpares / contadorNumeros : 0.0;
+
+        // Mostrar los resultados
+        System.out.println("Se introdujeron " + contadorNumeros + " números.");
+        System.out.println("La media de los números impares es: " + mediaImpares);
+        
+        if (contadorNumeros > 0) {
+            System.out.println("El mayor número par es: " + mayorPar);
+        } else {
+            System.out.println("No se introdujeron números pares.");
+        }
+
+        // Cerrar el scanner
+        scanner.close();
+    }
+}
+
+
+
 
 
 
